@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="title">Resumo do Faturamento</h2>
+
+  <div class="content-section">
+    <div class="form-section">
+      <!-- Campo de data adicionado -->
+      <label for="data">Data</label>
+      <input type="date" [(ngModel)]="novoFaturamento.data" class="input-data" />
+
+      <label for="valor">Valor</label>
+      <input type="number" [(ngModel)]="novoFaturamento.valor" class="input-valor" />
+
+      <button (click)="adicionarFaturamento()" class="btn-add">Adicionar Faturamento</button>
+    </div>
+
+    <!-- Tabela de Faturamento -->
+    <table class="faturamento-table" *ngIf="hasData">
+      <thead>
+        <tr>
+          <th>Data</th> <!-- Alterado para "Data" -->
+          <th>Valor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let faturamento of faturamentos">
+          <td>{{ faturamento.data | date: 'dd/MM/yyyy' }}</td> <!-- Formatação da data -->
+          <td>{{ faturamento.valor | currency }}</td>
+          <td>
+            <button (click)="alterarFaturamento(faturamento)" class="btn-action btn-edit">Alterar</button>
+            <button (click)="confirmarRemocao(faturamento.id)" class="btn-action btn-delete">Apagar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Resumo Mensal -->
+  <div class="summary-section">
+    <h3>Resumo Mensal</h3>
+    <p><strong>Menor Valor:</strong> {{ menorValor | currency }}</p>
+    <p><strong>Maior Valor:</strong> {{ maiorValor | currency }}</p>
+    <p><strong>Dias acima da Média:</strong> {{ diasAcimaDaMedia }}</p>
+  </div>
+</div>

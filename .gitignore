@@ -10,6 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+pnpm-debug.log
 
 # IDEs and editors
 .idea/
@@ -19,6 +20,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.sublime-project
 
 # Visual Studio Code
 .vscode/*
@@ -26,17 +28,39 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Miscellaneous
 /.angular/cache
+/.angular/cache/*
+/coverage
 .sass-cache/
 /connect.lock
-/coverage
 /libpeerconnection.log
 testem.log
 /typings
+.history/
 
 # System files
 .DS_Store
 Thumbs.db
+
+# SQLite database files
+*.db
+*.sqlite
+
+# Dotnet specific
+bin/
+obj/
+*.db-shm
+*.db-wal
+
+# Generated migration files
+Migrations/
