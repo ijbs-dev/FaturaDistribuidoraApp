@@ -1,4 +1,3 @@
-```markdown
 # Distribuidora Frontend e API Backend
 
 Este projeto é composto por uma aplicação Angular no frontend e uma API RESTful criada com ASP.NET Core no backend. A aplicação permite gerenciar o faturamento de uma distribuidora, realizando operações de CRUD e exibindo resumos dos valores de faturamento.
@@ -52,7 +51,7 @@ Inicie a API backend no ambiente de desenvolvimento:
 dotnet run
 ```
 
-A API estará rodando em `http://localhost:5068`.
+A API estará rodando em `http://localhost:{PORT}`.
 
 ### 3. Configuração do Frontend (Angular)
 
