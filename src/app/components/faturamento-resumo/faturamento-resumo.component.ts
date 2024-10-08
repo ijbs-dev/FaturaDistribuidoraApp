@@ -10,7 +10,7 @@ import { Faturamento } from '../../models/faturamento.model';
 export class FaturamentoResumoComponent implements OnInit {
 
   faturamentos: Faturamento[] = [];
-  novoFaturamento: Faturamento = { id: 0, data: new Date(), valor: 0 }; // Ajustado para "data"
+  novoFaturamento: Faturamento = { id: 0, data: new Date(), valor: 0 };
   erro!: string;
   hasData: boolean = false;
   maiorValor!: number;
@@ -23,7 +23,6 @@ export class FaturamentoResumoComponent implements OnInit {
     this.buscarFaturamentos();
   }
 
-  // Função para buscar todos os faturamentos
   buscarFaturamentos(): void {
     this.faturamentoService.getFaturamentoResumo().subscribe(
       data => {
@@ -41,9 +40,7 @@ export class FaturamentoResumoComponent implements OnInit {
     );
   }
 
-  // Adicionar novo faturamento
   adicionarFaturamento(): void {
-    // Converter a data recebida do input para um objeto Date
     const dataFormatada = new Date(this.novoFaturamento.data);
 
     if (isNaN(dataFormatada.getTime())) {
@@ -55,8 +52,8 @@ export class FaturamentoResumoComponent implements OnInit {
 
     this.faturamentoService.createFaturamento(this.novoFaturamento).subscribe(
       response => {
-        this.buscarFaturamentos();  // recarregar a tabela
-        this.novoFaturamento = { id: 0, data: new Date(), valor: 0 };  // resetar o formulário
+        this.buscarFaturamentos();
+        this.novoFaturamento = { id: 0, data: new Date(), valor: 0 };
       },
       error => {
         console.error('Erro ao adicionar faturamento:', error);
@@ -65,7 +62,6 @@ export class FaturamentoResumoComponent implements OnInit {
   }
 
 
-  // Alterar faturamento
   alterarFaturamento(faturamento: Faturamento): void {
     const novoValor = prompt('Novo valor:', faturamento.valor.toString());
     if (novoValor) {
@@ -77,7 +73,6 @@ export class FaturamentoResumoComponent implements OnInit {
     }
   }
 
-  // Confirmar remoção
   confirmarRemocao(id: number): void {
     const confirmar = confirm('Deseja realmente remover esse faturamento?');
     if (confirmar) {
