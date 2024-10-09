@@ -1,6 +1,16 @@
-# Distribuidora Frontend e API Backend
+# Faturamento de uma Distribuidora 
 
 Este projeto é composto por uma aplicação Angular no frontend e uma API RESTful criada com ASP.NET Core no backend. A aplicação permite gerenciar o faturamento de uma distribuidora, realizando operações de CRUD e exibindo resumos dos valores de faturamento.
+
+---
+
+### Visualização Detalhada
+
+#### Diretorio Projeto 
+![Visualização Geral - Exemplo 1](https://drive.google.com/uc?export=view&id=1BGJmvSP0sFkhACwp8oGADQ4Es5VPolFH)
+
+#### Tela de Home
+![Exemplo de Funcionamento](https://drive.google.com/uc?export=view&id=15o3-RNs6JrzQHj5QtnTVyvj2bQiSOCEw)
 
 ## Pré-requisitos
 
@@ -138,7 +148,21 @@ Endpoint: `DELETE /api/faturamento/{id}`
 
 ---
 
-### 8. Tecnologias Utilizadas
+## 8. Exemplo da Interface da Aplicação
+
+### 8.1 Fluxo de Cadastro e Visualização de Faturamentos
+
+#### 8.1.1 Criando Novos dados 
+![GIF 1](https://github.com/ijbs-dev/FaturaDistribuidoraApp/blob/main/mov/1.gif)
+
+#### 8.1.2 Alterando dados
+![GIF 2](https://github.com/ijbs-dev/FaturaDistribuidoraApp/blob/main/mov/2.gif)
+
+#### 8.1.3 Apagando dados
+![GIF 3](https://github.com/ijbs-dev/FaturaDistribuidoraApp/blob/main/mov/3.gif)
+
+
+### 9. Tecnologias Utilizadas
 
 - **Frontend**: Angular
 - **Backend**: ASP.NET Core
