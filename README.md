@@ -3,6 +3,37 @@
 Este projeto é composto por uma aplicação Angular no frontend e uma API RESTful criada com ASP.NET Core no backend. A aplicação permite gerenciar o faturamento de uma distribuidora, realizando operações de CRUD e exibindo resumos dos valores de faturamento.
 
 ---
+## Índice
+
+1. [Visualização Detalhada](#visualização-detalhada)
+   - [Diretório Projeto](#diretorio-projeto)
+   - [Tela de Home](#tela-de-home)
+2. [Pré-requisitos](#pré-requisitos)
+3. [Instalação](#instalação)
+   - [1. Clone o repositório](#1-clone-o-repositório)
+   - [2. Configuração do Backend (API .NET)](#2-configuração-do-backend-api-net)
+     - [2.1. Restaurar os pacotes do .NET](#21-restaurar-os-pacotes-do-net)
+     - [2.2. Aplicar as Migrations (Banco de Dados)](#22-aplicar-as-migrations-banco-de-dados)
+     - [2.3. Rodar o Backend](#23-rodar-o-backend)
+   - [3. Configuração do Frontend (Angular)](#3-configuração-do-frontend-angular)
+     - [3.1. Instalar as dependências do Angular](#31-instalar-as-dependências-do-angular)
+     - [3.2. Configurar o Ambiente](#32-configurar-o-ambiente)
+     - [3.3. Rodar o Frontend](#33-rodar-o-frontend)
+4. [Testando a Aplicação](#testando-a-aplicação)
+5. [Estrutura do Projeto](#estrutura-do-projeto)
+   - [Backend (.NET API)](#backend-net-api)
+   - [Frontend (Angular)](#frontend-angular)
+6. [Operações Suportadas](#operações-suportadas)
+7. [Exemplos de Requests](#exemplos-de-requests)
+   - [7.1. Adicionar um novo Faturamento (POST)](#71-adicionar-um-novo-faturamento-post)
+   - [7.2. Atualizar um Faturamento (PUT)](#72-atualizar-um-faturamento-put)
+   - [7.3. Excluir um Faturamento (DELETE)](#73-excluir-um-faturamento-delete)
+8. [Exemplo da Interface da Aplicação](#exemplo-da-interface-da-aplicação)
+   - [8.1 Fluxo de Cadastro e Visualização de Faturamentos](#81-fluxo-de-cadastro-e-visualização-de-faturamentos)
+     - [8.1.1 Criando Novos dados](#811-criando-novos-dados)
+     - [8.1.2 Alterando dados](#812-alterando-dados)
+     - [8.1.3 Apagando dados](#813-apagando-dados)
+9. [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 ### Visualização Detalhada
 
